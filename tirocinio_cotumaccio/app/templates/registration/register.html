@@ -1,0 +1,47 @@
+{% extends 'app/common.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href= "{% static 'ok.css' %}">
+
+
+ 
+  <title>Registrati </title>
+
+
+<div class="container my-5 text-center" style="max-width: 580px;">
+
+      
+  
+
+  <h1>Registrati</h1>
+    <hr width="100%" >
+
+  <form method="post" action="">
+    {% csrf_token %}
+
+
+        <table>
+                {{ form.as_table }}
+                 <tr>
+                    <td></td>
+                  </br>
+                    <td>
+                      </br>
+                        <input type="submit" name="submit" value="register" />
+                    </td>
+                    
+                </tr>
+        </table>
+
+
+  
+
+  </form>
+
+
+</div>
+
+
+{% endblock %}
